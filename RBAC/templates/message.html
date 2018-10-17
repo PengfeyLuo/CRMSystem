@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UserMessage</title>
+
+<table border="1">
+    <tr>
+        <td>账号</td>
+        <td>用户名</td>
+        <td>是否为客户</td>
+        <td>对应数据库id</td>
+        <td>电子邮件</td>
+        <td>操作</td>
+    </tr>
+    {% for user in userlist %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.nickname }}</td>
+            <td>{{ user.iscustomer }}</td>
+            <td>{{ user.messageid }}</td>
+            <td>{{ user.email }}</td>
+            <td><a href="/rbac/message/edit/{{ user.id }}">编辑</a></td>
+        </tr>
+    {% endfor %}
+</table>
+</head>
+<body>
+
+</body>
+</html>
