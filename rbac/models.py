@@ -7,7 +7,7 @@ class Menu(models.Model):
     菜单模型
     """
     title = models.CharField(max_length=32, unique=True, null=False)
-    parent = models.ForeignKey("Menu", null=False, blank=True, on_delete=models.CASCADE)
+    parent = models.ForeignKey("Menu", null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
         title_list = [self.title]

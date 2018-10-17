@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
+default_app_config = 'blog.apps.BlogConfig'
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -37,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'RBAC',
-    'User',
+    'rbac',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'rbac.middleware.rbac.RbacMiddleware',
 ]
 
 ROOT_URLCONF = 'CRMSystem.urls'
@@ -137,6 +139,12 @@ SESSION_MENU_KEY = 'awesome'
 ALL_MENU_KEY = 'k1'
 PERMISSION_MENU_KEY = 'k2'
 
+# SESSION_PERMISSION_URL_KEY = ''
+#
+# SESSION_MENU_KEY = ''
+# ALL_MENU_KEY = ''
+# PERMISSION_MENU_KEY = ''
+
 LOGIN_URL = '/login/'
 REGEX_URL = r'^{url}$'  # url作严格匹配
 
@@ -145,7 +153,5 @@ SAFE_URL = [
     r'/login/',
     '/admin/.*',
     '/test/',
-    '/index/',
-    '^/rbac/',
-    '/logout/'
+    '/logout/',
 ]

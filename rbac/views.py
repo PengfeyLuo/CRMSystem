@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, reverse
 from .models import UserInfo, Role, Permission, Menu
-from User.models import CustomerMessage, StaffMessage
+from user.models import CustomerMessage, StaffMessage
 from .forms import UserInfoModelForm, RoleModelForm, PermissionModelForm, MenuModelForm
-from User.forms import CustomerModelForm, StaffModelForm
+from user.forms import CustomerModelForm, StaffModelForm
 from django.http import HttpResponse
 
 
