@@ -24,6 +24,8 @@ urlpatterns = [
     url(r'^index/$', userviews.index),
     url(r'^logout/$', userviews.logout),
     url(r'^login/$', userviews.login),
+    url(r'^$', userviews.login),
 
     url(r'^rbac/', include('rbac.urls')),
+
 ]

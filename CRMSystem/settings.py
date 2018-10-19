@@ -154,4 +154,5 @@ SAFE_URL = [
     '/admin/.*',
     '/test/',
     '/logout/',
+    '',
 ]
