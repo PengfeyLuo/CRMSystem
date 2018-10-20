@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^login/$', userviews.login),
     url(r'^$', userviews.login),
 
+    url(r'^case/', include('case.urls')),
     url(r'^rbac/', include('rbac.urls')),
-
+    url(r'^user/', include('user.urls')),
 ]

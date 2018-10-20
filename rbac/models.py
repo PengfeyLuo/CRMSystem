@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 
@@ -14,7 +13,7 @@ class Menu(models.Model):
         title_list = [self.title]
         p = self.parent
         while p:
-            title_list.append(0, p.title)
+            title_list.insert(0, p.title)
             p = p.parent
         return '-'.join(title_list)
 

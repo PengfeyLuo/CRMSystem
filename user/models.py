@@ -23,7 +23,7 @@ class StaffMessage(models.Model):
     gender = models.CharField(max_length=32, blank=False, null=False)
     apartment = models.CharField(max_length=32, blank=False, null=False)
     role = models.CharField(max_length=32, blank=False, null=False)
-    address = models.CharField(max_length=64, null=True, blank=True)
+    address = models.CharField(max_length=64, blank=True, null=True)
 
     rate = models.FloatField(default=10.0)
 

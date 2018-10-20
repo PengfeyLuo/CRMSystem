@@ -1,7 +1,6 @@
 from ..models import UserInfo, Menu
 from django.conf import settings
 
-
 def init_permission(request, user_obj):
     """
     初始化用户权限, 写入session

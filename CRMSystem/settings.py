@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rbac',
-    'user',
+    'rbac.apps.RbacConfig',
+    'user.apps.UserConfig',
+    'case.apps.CaseConfig',
 ]
 
 MIDDLEWARE = [
@@ -139,11 +140,6 @@ SESSION_MENU_KEY = 'awesome'
 ALL_MENU_KEY = 'k1'
 PERMISSION_MENU_KEY = 'k2'
 
-# SESSION_PERMISSION_URL_KEY = ''
-#
-# SESSION_MENU_KEY = ''
-# ALL_MENU_KEY = ''
-# PERMISSION_MENU_KEY = ''
 
 LOGIN_URL = '/login/'
 REGEX_URL = r'^{url}$'  # url作严格匹配
@@ -154,5 +150,5 @@ SAFE_URL = [
     '/admin/.*',
     '/test/',
     '/logout/',
-    '',
+
 ]

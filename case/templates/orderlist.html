@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单列表</title>
+<table border="1">
+    <tr>
+        <td>商品名</td>
+        <td>客户名</td>
+        <td>经办人</td>
+        <td>数量</td>
+        <td>日期</td>
+        <td>操作</td>
+    </tr>
+    {% for order in order_list %}
+        <tr>
+            <td>{{ order.item_id }}</td>
+            <td>{{ order.customer_id }}</td>
+            <td>{{ order.staff_id }}</td>
+            <td>{{ order.amount }}</td>
+            <td>{{ order.date }}</td>
+            <td><a href="/order/edit/{{ user.id }}">编辑</a></td>
+        </tr>
+    {% endfor %}
+</table>
+</head>
+<body>
+
+</body>
+</html>

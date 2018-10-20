@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信息编辑</title>
+</head>
+<body>
+<form  enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    {{ message_form.as_p }}
+    <button type="submit">提交</button>
+</form>
+</body>
+</html>

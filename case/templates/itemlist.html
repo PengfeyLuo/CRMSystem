@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>物品列表</title>
+
+<table border="1">
+    <tr>
+        <td>名称</td>
+        <td>编号</td>
+        <td>型号</td>
+        <td>价格</td>
+        <td>生产日期</td>
+        <td>剩余数量</td>
+        <td>评分</td>
+        <td>操作</td>
+    </tr>
+    {% for item in item_list %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.num }}</td>
+            <td>{{ item.model }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.production_date }}</td>
+            <td>{{ item.left_amount }}</td>
+            <td>{{ item.rate }}</td>
+            <td><a href="/user/item/{{ user.id }}">编辑</a></td>
+        </tr>
+    {% endfor %}
+</table>
+</head>
+<body>
+
+</body>
+</html>
