@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+<form method="post" action="">
+    {% csrf_token %}
+    <p><label>对商品{{ item_name }}的评分<input type="text" name="item_rate" \></label></p>
+    <p><label>对人员{{ staff_name }}的评分<input type="text" name="staff_rate" \></label></p>
+    <p>{{ error_message }}</p>
+    <button type="submit">提交</button>
+</form>
+</head>
+<body>
+
+</body>
+</html>

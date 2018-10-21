@@ -38,5 +38,9 @@ def init_permission(request, user_obj):
         settings.PERMISSION_MENU_KEY: permission_menu_list,
     }
 
+    request.session[settings.USER_TYPE] = 1 if user_obj.is_customer is True else 2
+    request.session[settings.USER_ID] = user_obj.id
+
+
     # print('request.session[settings.SESSION_PERMISSION_URL_KEY] ------------------- ', request.session[settings.SESSION_PERMISSION_URL_KEY])
 

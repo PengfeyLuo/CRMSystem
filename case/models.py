@@ -29,6 +29,7 @@ class OrderInfo(models.Model):
     staff_id = models.ForeignKey(UserInfo, on_delete=models.CASCADE, related_name='staff_id')
     amount = models.IntegerField(blank=True, null=True)
     date = models.DateTimeField(blank=False, null=False, default=timezone.now)
+    is_rated = models.BooleanField(default=False)
 
     def __str__(self):
 

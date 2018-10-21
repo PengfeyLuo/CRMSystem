@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from .models import UserInfo, Role, Permission, Menu
-from user.models import CustomerMessage, StaffMessage
+from user.models import CustomerInfo, StaffInfo
 from .forms import UserInfoModelForm, RoleModelForm, PermissionModelForm, MenuModelForm
 from user.forms import CustomerModelForm, StaffModelForm
 from django.http import HttpResponse
@@ -193,7 +193,7 @@ def message(request):
 def message_edit(requst, id):
     user_obj = UserInfo.objects.filter(id=id).first()
     if user_obj.iscustomer == True:
-        message_obj = CustomerMessage.objects.filter(id=user_obj.messageid).first()
+        message_obj = CustomerInfo.objects.filter(id=user_obj.messageid).first()
         if requst.method == 'GET':
             user_form = UserInfoModelForm(instance=user_obj)
             message_form = CustomerModelForm(instance=message_obj)
@@ -208,7 +208,7 @@ def message_edit(requst, id):
             else:
                 return HttpResponse("错误")
     else:
-        message_obj = StaffMessage.objects.filter(id=user_obj.messageid).first()
+        message_obj = StaffInfo.objects.filter(id=user_obj.messageid).first()
         if requst.method == 'GET':
             user_form = UserInfoModelForm(instance=user_obj)
             message_form = StaffModelForm(instance=message_obj)
@@ -238,7 +238,7 @@ def newcustomer(request):
             user_form.save()
             message_form.save()
             user_obj = UserInfo.objects.last()
-            user_obj.messageid = CustomerMessage.objects.last().id
+            user_obj.messageid = CustomerInfo.objects.last().id
             user_obj.iscustomer = True
             user_obj.save()
             return redirect(reverse(message))
@@ -259,7 +259,7 @@ def newstaff(request):
             user_form.save()
             message_form.save()
             user_obj = UserInfo.objects.last()
-            user_obj.messageid = StaffMessage.objects.last().id
+            user_obj.messageid = StaffInfo.objects.last().id
             user_obj.iscustomer = False
             user_obj.save()
             return redirect(reverse(message))

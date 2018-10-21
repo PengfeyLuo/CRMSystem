@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import CustomerMessage, StaffMessage
+from .models import CustomerInfo, StaffInfo
 # Register your models here.
 
-admin.site.register(CustomerMessage)
-admin.site.register(StaffMessage)
+admin.site.register(CustomerInfo)
+admin.site.register(StaffInfo)

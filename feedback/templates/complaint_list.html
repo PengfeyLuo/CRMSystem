@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>投诉列表</title>
+
+<table border="1">
+    <tr>
+        <td>客户</td>
+        <td>标题</td>
+{#        <td>内容</td>#}
+{#        <td>回复</td>#}
+        <td>投诉类型</td>
+        <td>投诉提交日期</td>
+        <td>最后修改日期</td>
+        <td>状态</td>
+        <td>操作</td>
+    </tr>
+    {% for complaint in complaint_list %}
+        <tr>
+            <td>{{ complaint.customer_id}}</td>
+            <td>{{ complaint.title }}</td>
+{#            <td>{{ service.content }}</td>#}
+{#            <td>{{ service.reply }}</td>#}
+            <td>{{ complaint.get_type_display }}</td>
+            <td>{{ complaint.submit_date}}</td>
+            <td>{{ complaint.last_modify_date }}</td>
+            <td>{{ complaint.get_status_display }}</td>
+            <td><a href="/feedback/complaint/edit/{{ complaint.id }}">编辑</a></td>
+        </tr>
+    {% endfor %}
+</table>
+</head>
+<body>
+
+</body>
+</html>

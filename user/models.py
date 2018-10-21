@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class CustomerMessage(models.Model):
+class CustomerInfo(models.Model):
     company = models.CharField(max_length=64, blank=False, null=False)
     representative = models.CharField(max_length=32, blank=False, null=False)
     postcode = models.CharField(max_length=32, blank=False, null=False)
@@ -18,7 +18,7 @@ class CustomerMessage(models.Model):
         return "Customer " + str(self.id) + " " + self.representative
 
 
-class StaffMessage(models.Model):
+class StaffInfo(models.Model):
     age = models.IntegerField(blank=False, null=False)
     gender = models.CharField(max_length=32, blank=False, null=False)
     apartment = models.CharField(max_length=32, blank=False, null=False)

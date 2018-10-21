@@ -3,7 +3,7 @@ from rbac.models import UserInfo
 from rbac.service.init_permission import init_permission
 from django.conf import settings
 from rbac.forms import UserInfoModelForm
-from .models import CustomerMessage, StaffMessage
+from .models import CustomerInfo, StaffInfo
 from .forms import CustomerModelForm, StaffModelForm
 import json
 
@@ -53,11 +53,11 @@ def user_edit(request, id):
     user_obj = UserInfo.objects.filter(id=id).first()
     id_recorder = user_obj.database_id
     if user_obj.is_customer:
-        customer_obj = CustomerMessage.objects.filter(id=user_obj.database_id).first()
+        customer_obj = CustomerInfo.objects.filter(id=user_obj.database_id).first()
         if request.method == "GET":
             user_form = UserInfoModelForm(instance=user_obj)
             customer_form = CustomerModelForm(instance=customer_obj)
-            return render(request, 'user_edit.html', {'user_form': user_form, 'message_form': customer_form})
+            return render(request, 'edit_user.html', {'user_form': user_form, 'message_form': customer_form})
         else:
             user_form = UserInfoModelForm(request.POST, instance=user_obj)
             customer_form = CustomerModelForm(request.POST, instance=customer_obj)
@@ -72,11 +72,11 @@ def user_edit(request, id):
             else:
                 return HttpResponse("错误")
     else:
-        staff_obj = StaffMessage.objects.filter(id=user_obj.database_id).first()
+        staff_obj = StaffInfo.objects.filter(id=user_obj.database_id).first()
         if request.method == 'GET':
             user_form = UserInfoModelForm(instance=user_obj)
             staff_form = StaffModelForm(instance=staff_obj)
-            return render(request, 'user_edit.html', {'user_form': user_form, 'message_form': staff_form})
+            return render(request, 'edit_user.html', {'user_form': user_form, 'message_form': staff_form})
         else:
             user_form = UserInfoModelForm(request.POST, instance=user_obj)
             staff_form = StaffModelForm(request.POST, instance=staff_obj)
@@ -96,7 +96,7 @@ def add_customer(request):
     if request.method == 'GET':
         user_form = UserInfoModelForm()
         customer_form = CustomerModelForm()
-        return render(request, "user_edit.html", {"user_form": user_form, "message_form": customer_form})
+        return render(request, "edit_user.html", {"user_form": user_form, "message_form": customer_form})
     else:
         user_form = UserInfoModelForm(request.POST)
         customer_form = CustomerModelForm(request.POST)
@@ -104,7 +104,7 @@ def add_customer(request):
             user_form.save()
             customer_form.save()
             user_obj = UserInfo.objects.last()
-            user_obj.database_id = CustomerMessage.objects.last().id
+            user_obj.database_id = CustomerInfo.objects.last().id
             user_obj.is_customer = True
             user_obj.save()
             return redirect(user_list)
@@ -116,7 +116,7 @@ def add_staff(request):
     if request.method == 'GET':
         user_form = UserInfoModelForm()
         staff_form = StaffModelForm()
-        return render(request, "user_edit.html", {"user_form": user_form, "message_form": staff_form})
+        return render(request, "edit_user.html", {"user_form": user_form, "message_form": staff_form})
     else:
         user_form = UserInfoModelForm(request.POST)
         staff_form = StaffModelForm(request.POST)
@@ -124,7 +124,7 @@ def add_staff(request):
             user_form.save()
             staff_form.save()
             user_obj = UserInfo.objects.last()
-            user_obj.database_id = StaffMessage.objects.last().id
+            user_obj.database_id = StaffInfo.objects.last().id
             user_obj.is_customer = False
             user_obj.save()
             return redirect(user_list)

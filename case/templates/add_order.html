@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<form method="post">
+    {% csrf_token %}
+    {{ order_form.as_p }}
+    {{ error_message }}
+    <button type="submit">提交</button>
+</form>
+
+</head>
+<body>
+
+</body>
+</html>

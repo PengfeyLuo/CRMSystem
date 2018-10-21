@@ -50,7 +50,7 @@ class UserInfo(models.Model):
     nickname = models.CharField(max_length=32, null=False)
     email = models.EmailField(null=True)
     is_customer = models.BooleanField(default=False, null=False)
-    database_id = models.IntegerField(blank=False)
+    database_id = models.IntegerField(blank=False, null=False, default=1)
 
     roles = models.ManyToManyField("Role")
 

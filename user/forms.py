@@ -1,10 +1,10 @@
 from django.forms import ModelForm
-from .models import CustomerMessage, StaffMessage
+from .models import CustomerInfo, StaffInfo
 
 
 class CustomerModelForm(ModelForm):
     class Meta:
-        model = CustomerMessage
+        model = CustomerInfo
         fields = '__all__'
         labels = {
             'company': '公司',
@@ -21,7 +21,7 @@ class CustomerModelForm(ModelForm):
 
 class StaffModelForm(ModelForm):
     class Meta:
-        model = StaffMessage
+        model = StaffInfo
         fields = '__all__'
         labels = {
             'age': '年龄',

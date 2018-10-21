@@ -10,7 +10,7 @@
         <td>经办人</td>
         <td>数量</td>
         <td>日期</td>
-        <td>操作</td>
+        <td colspan="2">操作</td>
     </tr>
     {% for order in order_list %}
         <tr>
@@ -19,7 +19,16 @@
             <td>{{ order.staff_id }}</td>
             <td>{{ order.amount }}</td>
             <td>{{ order.date }}</td>
-            <td><a href="/order/edit/{{ user.id }}">编辑</a></td>
+            {% ifequal user_type 2 %}
+                <td><a href="/case/order/edit/{{ order.id }}">编辑</a></td>
+            {% endifequal %}
+
+            {% ifequal user_type 1 %}
+                {% ifequal order.is_rated False %}
+                    <td><a href="/case/order/rate/{{ order.id }}">评分</a></td>
+                {% endifequal %}
+            {% endifequal %}
+
         </tr>
     {% endfor %}
 </table>

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rbac.apps.RbacConfig',
     'user.apps.UserConfig',
     'case.apps.CaseConfig',
+    'feedback.apps.FeedbackConfig',
 ]
 
 MIDDLEWARE = [
@@ -135,11 +136,11 @@ STATICFILES_DIRS = (
 # 保存用户权限url列表
 # 保存 权限菜单 和所有 菜单
 SESSION_PERMISSION_URL_KEY = 'cool'
-
 SESSION_MENU_KEY = 'awesome'
 ALL_MENU_KEY = 'k1'
 PERMISSION_MENU_KEY = 'k2'
-
+USER_TYPE = 'type'
+USER_ID = 'ID'
 
 LOGIN_URL = '/login/'
 REGEX_URL = r'^{url}$'  # url作严格匹配
@@ -150,5 +151,4 @@ SAFE_URL = [
     '/admin/.*',
     '/test/',
     '/logout/',
-
 ]

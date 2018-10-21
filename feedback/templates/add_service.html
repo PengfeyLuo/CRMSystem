@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>售后服务</title>
+<form method="post">
+    {% csrf_token %}
+    <select name="订单">
+      {%for order in customer_order %}
+        <option value="{{order.item_id }}">{{order.item_id}}</option>
+      {%endfor%}
+        <option value="请选择订单" selected="selected">请选择订单</option>
+    </select>
+    <button type="submit">提交</button>
+</form>
+</head>
+<body>
+
+</body>
+</html>
