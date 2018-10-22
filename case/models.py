@@ -33,5 +33,5 @@ class OrderInfo(models.Model):
 
     def __str__(self):
 
-        return str(self.customer_id) + " " + str(self.item_id)
+        return str(self.id) + " " + str(self.customer_id) + " " + str(self.item_id)
 

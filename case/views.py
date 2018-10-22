@@ -8,17 +8,18 @@ from CRMSystem.settings import USER_TYPE, USER_ID
 
 
 def item_list(request):
+
     item_list = ItemInfo.objects.all()
     return render(request, "item_list.html", {"item_list": item_list, "user_type": request.session[USER_TYPE]})
 
 
 def order_list(request):
-    global order_list
     if request.session[USER_TYPE] == 1:
         order_list = OrderInfo.objects.filter(customer_id=request.session[USER_ID])
+        return render(request, "order_list.html", {"order_list": order_list, "user_type": request.session[USER_TYPE]})
     else:
         order_list = OrderInfo.objects.all()
-    return render(request, "order_list.html", {"order_list": order_list, "user_type": request.session[USER_TYPE]})
+        return render(request, "order_list.html", {"order_list": order_list, "user_type": request.session[USER_TYPE]})
 
 
 def add_item(request):

@@ -11,8 +11,9 @@ class ServiceInfo(models.Model):
         ('processing', '处理中'),
         ('finished', '已完成'),
     )
+    customer_id = models.ForeignKey(UserInfo, on_delete=models.CASCADE, related_name='service_customer_id')
     order_id = models.ForeignKey(OrderInfo, on_delete=models.CASCADE)
-    staff_id = models.ForeignKey(UserInfo, on_delete=models.CASCADE)
+    staff_id = models.ForeignKey(UserInfo, on_delete=models.CASCADE, related_name='service_staff_id')
     content = models.TextField(null=False, blank=False)
     reply = models.TextField(null=True, blank=True, default='')
     submit_date = models.DateTimeField(default=timezone.now)
@@ -20,7 +21,7 @@ class ServiceInfo(models.Model):
     status = models.CharField(max_length=32, null=False, blank=False, choices=STATUS_CHOICES, default='submitted')
 
     def __str__(self):
-        return str(self.order_id) + " " + str(self.status)
+        return str(self.order_id) + " " + repr(self.get_status_display())
 
 
 class ComplaintInfo(models.Model):
@@ -45,5 +46,5 @@ class ComplaintInfo(models.Model):
     status = models.CharField(max_length=32, null=False, blank=False, choices=STATUS_CHOICES, default='submitted')
 
     def __str__(self):
-        return str(self.customer_id) + " " + str(self.title) + " " + self.get_status_display()
+        return repr(self.id) + " " + str(self.title) + " " + str(self.get_status_display)
 

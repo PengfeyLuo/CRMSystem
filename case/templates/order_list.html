@@ -27,6 +27,10 @@
                 {% ifequal order.is_rated False %}
                     <td><a href="/case/order/rate/{{ order.id }}">评分</a></td>
                 {% endifequal %}
+
+                {% ifequal order.is_rated True %}
+                    <td>已评分</td>
+                {% endifequal %}
             {% endifequal %}
 
         </tr>
