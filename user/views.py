@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, HttpResponse,reverse
+from django.shortcuts import render, redirect, HttpResponse, reverse
 from rbac.models import UserInfo
 from rbac.service.init_permission import init_permission
 from django.conf import settings

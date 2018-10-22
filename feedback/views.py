@@ -18,12 +18,12 @@ def service_list(request):
 
 
 def complaint_list(request):
-    global complaint_list
     if request.session[USER_TYPE] == 1:
-        complaint_list = ServiceInfo.objects.filter(customer_id=request.session[USER_ID])
+        complaint_list = ComplaintInfo.objects.filter(customer_id=request.session[USER_ID])
+        return render(request, "complaint_list.html", {"complaint_list": complaint_list})
     else:
-        complaint_list = ServiceInfo.objects.all()
-    return render(request, "complaint_list.html", {"complaint_list": complaint_list})
+        complaint_list = ComplaintInfo.objects.all()
+        return render(request, "complaint_list.html", {"complaint_list": complaint_list})
 
 
 def add_service(request):
@@ -54,9 +54,61 @@ def add_service(request):
         return redirect(service_list)
 
 
-# def add_complaint(request):
-#     customer_id = UserInfo.objects.filter(id=request.session[USER_ID]).first()
-#     if request.method == 'GET':
-#
-#         title = request.POST.get('title')
-#         content =
+def add_complaint(request):
+    customer_id = UserInfo.objects.filter(id=request.session[USER_ID]).first()
+    if request.method == 'GET':
+        type_choices = dict(ComplaintInfo.TYPE_CHOICES).values()
+        return render(request, 'add_complaint.html', {"type_choices": type_choices})
+    else:
+        title = request.POST.get('title')
+        content = request.POST.get('content')
+        types = ComplaintInfo.HASH_TYPE[request.POST.get('types')]
+        submit_date = timezone.now()
+        status = 'submitted'
+
+        complaint_obj = ComplaintInfo()
+        complaint_obj.customer_id = customer_id
+        complaint_obj.title = title
+        complaint_obj.content = content
+        complaint_obj.submit_date = submit_date
+        complaint_obj.status = status
+        complaint_obj.type = types
+
+        complaint_obj.save()
+        return redirect(complaint_list)
+
+
+def edit_service(request, id):
+    service_obj = ServiceInfo.objects.filter(id=id).first()
+    if request.method == 'GET':
+        status_choices = dict(ServiceInfo.STATUS_CHOICES).values()
+        return render(request, 'edit_service.html', {"service_obj": service_obj, "status_choices": status_choices,
+                                                     "now_status": dict(ServiceInfo.STATUS_CHOICES)[service_obj.status]})
+    else:
+        reply = request.POST.get('reply', None)
+        last_modify_date = timezone.now()
+        status = ServiceInfo.HASH_STATUS[request.POST.get('status', None)]
+        service_obj.reply = reply
+        service_obj.last_modify_date = last_modify_date
+        service_obj.status = status
+
+        service_obj.save()
+        return redirect(service_list)
+
+def edit_complaint(request, id):
+    complaint_obj = ComplaintInfo.objects.filter(id=id).first()
+    if request.method == 'GET':
+        now_type = dict(ComplaintInfo.TYPE_CHOICES)[complaint_obj.type]
+        status_choices = dict(ComplaintInfo.STATUS_CHOICES).values()
+        now_status = dict(ComplaintInfo.STATUS_CHOICES)[complaint_obj.status]
+        return render(request, 'edit_complaint.html', {"complaint_obj": complaint_obj, "now_type": now_type,
+                                                       "now_status": now_status, "status_choices": status_choices})
+    else:
+        reply = request.POST.get('reply', None)
+        last_modify_date = timezone.now()
+        status = ServiceInfo.HASH_STATUS[request.POST.get('status', None)]
+        complaint_obj.reply = reply
+        complaint_obj.last_modify_date = last_modify_date
+        complaint_obj.status = status
+        complaint_obj.save()
+        return redirect(complaint_list)

@@ -14,6 +14,7 @@ class ItemInfo(models.Model):
     price = models.FloatField(blank=True, null=True, default=0)
     production_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
     left_amount = models.IntegerField(blank=True, null=True, default=0)
+    rate_times = models.IntegerField(blank=False, null=False, default=1)
     rate = models.FloatField(blank=False, null=False, default=10.0)
 
     def __str__(self):

@@ -24,7 +24,7 @@ class StaffInfo(models.Model):
     apartment = models.CharField(max_length=32, blank=False, null=False)
     role = models.CharField(max_length=32, blank=False, null=False)
     address = models.CharField(max_length=64, blank=True, null=True)
-
+    rate_times = models.IntegerField(blank=False, null=False, default=1)
     rate = models.FloatField(default=10.0)
 
     def __str__(self):

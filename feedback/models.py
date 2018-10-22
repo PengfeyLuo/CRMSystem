@@ -11,6 +11,11 @@ class ServiceInfo(models.Model):
         ('processing', '处理中'),
         ('finished', '已完成'),
     )
+    HASH_STATUS = {
+        '已提交': 'submitted',
+        '处理中': 'processing',
+        '已完成': 'finished',
+    }
     customer_id = models.ForeignKey(UserInfo, on_delete=models.CASCADE, related_name='service_customer_id')
     order_id = models.ForeignKey(OrderInfo, on_delete=models.CASCADE)
     staff_id = models.ForeignKey(UserInfo, on_delete=models.CASCADE, related_name='service_staff_id')
@@ -31,11 +36,22 @@ class ComplaintInfo(models.Model):
         ('advice', '意见建议'),
         ('other', '其他问题'),
     )
+    HASH_TYPE = {
+        '产品问题': 'item',
+        '服务问题': 'service',
+        '意见建议': 'advice',
+        '其他问题': 'other',
+    }
     STATUS_CHOICES = (
         ('submitted', '已提交'),
         ('processing', '处理中'),
         ('finished', '已完成'),
     )
+    HASH_STATUS = {
+        '已提交': 'submitted',
+        '处理中': 'processing',
+        '已完成': 'finished',
+    }
     customer_id = models.ForeignKey(UserInfo, on_delete=models.CASCADE)
     title = models.CharField(max_length=32, null=False, blank=False)
     type = models.CharField(max_length=32, null=False, blank=False, choices=TYPE_CHOICES, default='')
@@ -46,5 +62,5 @@ class ComplaintInfo(models.Model):
     status = models.CharField(max_length=32, null=False, blank=False, choices=STATUS_CHOICES, default='submitted')
 
     def __str__(self):
-        return repr(self.id) + " " + str(self.title) + " " + str(self.get_status_display)
+        return repr(self.id) + " " + str(self.title) + " " + repr(self.get_status_display())
 

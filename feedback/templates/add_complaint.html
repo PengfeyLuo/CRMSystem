@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <title>新增投诉服务</title>
 <form method="post">
-    <br>标题</br>
+    {% csrf_token %}
     <input name="title">请在此填写标题</input>
-
+    <select name="types">
+      {%for type in type_choices %}
+        <option value="{{type}}">{{type}}</option>
+      {%endfor%}
+        <option value="请选择投诉类型" selected="selected">请选择投诉类型</option>
+    </select>
     <textarea name="content" cols="40" rows="10" >请填写您的投诉信息</textarea>
 
     <button type="submit">提交</button>

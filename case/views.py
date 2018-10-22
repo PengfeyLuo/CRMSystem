@@ -137,12 +137,14 @@ def rate(request, id):
             return render(request, "rate.html",
                           {"title": title, "item_name": str(item_obj), "staff_name": str(staff_obj), "error_message": "请输入0-10以内的数字作为评分！"})
         else:
-            ori_item_rate = item_obj.rate
-            item_obj.rate = (ori_item_rate + item_rate) / 2
+            ori_item_rate = item_obj.rate * item_obj.rate_times
+            item_obj.rate_times = item_obj.rate_times + 1
+            item_obj.rate = (ori_item_rate + item_rate) / item_obj.rate_times
             item_obj.save()
 
-            ori_staff_rate = staff_obj.rate
-            staff_obj.rate = (ori_staff_rate + staff_rate) / 2
+            ori_staff_rate = staff_obj.rate * staff_obj.rate_times
+            staff_obj.rate_times = staff_obj.rate_times + 1
+            staff_obj.rate = (ori_staff_rate + staff_rate) / staff_obj.rate_times
             staff_obj.save()
 
             order_obj.is_rated = True

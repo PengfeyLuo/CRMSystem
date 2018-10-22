@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>回复售后服务</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <input name="customer_id" disabled value= {{ service_obj.customer_id }}>
+    <input name="order_id" disabled value= {{ service_obj.order_id  }}>
+    <textarea name="content" cols="40" rows="10" disabled>{{ service_obj.content }}</textarea>
+    <textarea name="reply" cols="40" rows="10" >{{ service_obj.reply }}</textarea>
+    <select name="status">
+      {%for status in status_choices %}
+        <option value= {{status}}>{{status}}</option>
+      {%endfor%}
+        <option value={{ now_status }} selected="selected">{{ now_status }}</option>
+    </select>
+    <button type="submit">提交</button>
+</form>
+</body>
+</html>
