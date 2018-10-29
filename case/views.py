@@ -25,7 +25,7 @@ def order_list(request):
 def add_item(request):
     if request.method == 'GET':
         item_form = ItemModelForm()
-        return render(request, "add_item.html", {"item_form": item_form})
+        return render(request, "add_item.html", {"item_form": item_form, 'user_type': request.session[USER_TYPE]})
     else:
         item_form = ItemModelForm(request.POST)
         if item_form.is_valid():
@@ -39,7 +39,8 @@ def add_item(request):
 def add_order(request):
     if request.method == 'GET':
         order_form = OrderModelForm()
-        return render(request, "add_order.html", {"order_form": order_form, "error_message": ""})
+        return render(request, "add_order.html", {"order_form": order_form, "error_message": "",
+                                                  'user_type': request.session[USER_TYPE]})
     else:
         order_form = OrderModelForm(request.POST)
         if order_form.is_valid():
@@ -54,7 +55,8 @@ def add_order(request):
             if not customer_legal:
                 error_message += " 所选客户不为客户！"
             if (not staff_legal) or (not customer_legal):
-                return render(request, "add_order.html", {"order_form": order_form, "error_message": error_message})
+                return render(request, "add_order.html", {"order_form": order_form, "error_message": error_message,
+                                                          'user_type': request.session[USER_TYPE]})
             else:
                 order_form.save()
                 return redirect(order_list)
@@ -66,7 +68,8 @@ def edit_order(request, id):
     order_obj = OrderInfo.objects.filter(id=id).first()
     if request.method == 'GET':
         order_form = OrderModelForm(instance=order_obj)
-        return render(request, "add_order.html", {"order_form": order_form, "error_message": ""})
+        return render(request, "add_order.html", {"order_form": order_form, "error_message": "",
+                                                  'user_type': request.session[USER_TYPE]})
     else:
         order_form = OrderModelForm(request.POST, instance=order_obj)
         if order_form.is_valid():
@@ -82,7 +85,8 @@ def edit_order(request, id):
             if not customer_legal:
                 error_message += " 所选客户不为客户！"
             if (not staff_legal) or (not customer_legal):
-                return render(request, "add_order.html", {"order_form": order_form, "error_message": error_message})
+                return render(request, "add_order.html", {"order_form": order_form, "error_message": error_message,
+                                                          'user_type': request.session[USER_TYPE]})
             else:
                 order_form.save()
                 return redirect(order_list)
@@ -93,7 +97,8 @@ def edit_order(request, id):
 def add_item(request):
     if request.method == 'GET':
         item_form = ItemModelForm()
-        return render(request, "add_item.html", {"item_form": item_form, "error_message": ""})
+        return render(request, "add_item.html", {"item_form": item_form, "error_message": "",
+                                                 'user_type': request.session[USER_TYPE]})
     else:
         item_form = ItemModelForm(request.POST)
         if item_form.is_valid():
@@ -107,7 +112,8 @@ def edit_item(request, id):
     item_obj = ItemInfo.objects.filter(id=id).first()
     if request.method == 'GET':
         item_form = ItemModelForm(instance=item_obj)
-        return render(request, "add_item.html", {"item_form": item_form, "error_message": ""})
+        return render(request, "add_item.html", {"item_form": item_form, "error_message": "",
+                                                 'user_type': request.session[USER_TYPE]})
     else:
         item_form = ItemModelForm(request.POST, instance=item_obj)
         if item_form.is_valid():
@@ -126,7 +132,8 @@ def rate(request, id):
     staff_obj = StaffInfo.objects.filter(id=staff_id.id).first()
     title = "对[" + str(order_obj) + "]订单的评分"
     if request.method == 'GET':
-        return render(request, "rate.html", {"title": title, "item_name": str(item_obj), "staff_name": str(staff_obj)})
+        return render(request, "rate.html", {"title": title, "item_name": str(item_obj), "staff_name": str(staff_obj),
+                                             'user_type': request.session[USER_TYPE]})
     else:
         try:
             item_rate = float(request.POST.get("item_rate", None))
@@ -135,7 +142,8 @@ def rate(request, id):
                 raise RuntimeError("数值错误")
         except:
             return render(request, "rate.html",
-                          {"title": title, "item_name": str(item_obj), "staff_name": str(staff_obj), "error_message": "请输入0-10以内的数字作为评分！"})
+                          {"title": title, "item_name": str(item_obj), "staff_name": str(staff_obj),
+                           "error_message": "请输入0-10以内的数字作为评分！", 'user_type': request.session[USER_TYPE]})
         else:
             ori_item_rate = item_obj.rate * item_obj.rate_times
             item_obj.rate_times = item_obj.rate_times + 1

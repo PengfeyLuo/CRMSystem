@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.shortcuts import HttpResponse, redirect
+from django.shortcuts import HttpResponse, redirect, render
 import re
 
 
@@ -49,10 +49,11 @@ class RbacMiddleware(MiddlewareMixin):
         else:
             # 如果是调试模式，显示可访问url
             if settings.DEBUG:
-                info ='<br/>' + ( '<br/>'.join(permission_url))
-                return HttpResponse('无权限，请尝试访问以下地址：%s' %info)
+                # info ='<br/>' + ( '<br/>'.join(permission_url))
+                # return HttpResponse('无权限，请尝试访问以下地址：%s' %info)
+                return render(request, 'no_permission.html')
             else:
-                return HttpResponse('无权限访问')
+                return render(request, 'no_permission.html')
 
 
 

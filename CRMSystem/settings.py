@@ -128,8 +128,10 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static').replace('\\', '/')
 STATICFILES_DIRS = (
     ('css', os.path.join(STATIC_ROOT, 'css').replace('\\', '/')),
-    ('ima', os.path.join(STATIC_ROOT, 'ima').replace('\\', '/')),
+    ('img', os.path.join(STATIC_ROOT, 'img').replace('\\', '/')),
     ('js', os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
+    ('fonts', os.path.join(STATIC_ROOT, 'fonts').replace('\\', '/')),
+    ('html', os.path.join(STATIC_ROOT, 'html').replace('\\', '/')),
 )
 
 # 定义session 键：

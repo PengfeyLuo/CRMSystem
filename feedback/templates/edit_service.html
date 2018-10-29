@@ -2,22 +2,157 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>回复售后服务</title>
+    <title>处理售后</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link rel="stylesheet" href="../../../../../static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../../../static/css/background.css">
+	<script src="../../../../../static/js/jquery.min.js"></script>
+	<script src="../../../../../static/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="container">
+<div class="jumbotron" style="height:2000px;opacity:0.75">
+  <div class="row">
+  <div class="page-header">
+       <h1 class="text-center" styele="bg-color:black;text-color:white"><b><strong>客户关系管理系统</strong></b><small>CRM System</small></h1>
+   </div>
+   </div>
+	<div class="row">
+          <nav class="navbar navbar-inverse" role="navigation">
+                <div class="container-fluid">
+
+                    <div>
+                        <ul class="nav navbar-nav">
+                            <li><a href="/case/item/">商品列表</a></li>
+                            <li><a href="/case/order/">订单列表</a></li>
+							{% ifequal user_type 2 %}
+							<li><a href="/case/add_item/">商品上新</a></li>
+							<li><a href="/case/add_order/">创建新订单</a></li>
+							<li><a href="/feedback/service/">处理售后申请</a></li>
+							<li><a href="/feedback/complaint/">处理客户投诉</a></li>
+							{% endifequal %}
+							{% ifequal user_type 1 %}
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    申请售后 <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/feedback/add_service/">填写售后单</a></li>
+									<li class="divider"></li>
+                                    <li><a href="/feedback/service/">查看申请结果</a></li>
+                                </ul>
+                            </li>
+							{% endifequal %}
+							{% ifequal user_type 1 %}
+							<li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    投诉与建议 <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/feedback/add_complaint/">填写投诉单</a></li>
+									<li class="divider"></li>
+                                    <li><a href="/feedback/complaint/">查看投诉结果</a></li>
+                                </ul>
+                            </li>
+							{% endifequal %}
+							{% ifequal user_type 2 %}
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    新增用户 <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/user/add_customer/">新增客户</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/user/add_staff/">新增工作人员</a></li>
+                                </ul>
+                            </li>
+							{% endifequal %}
+							{% ifequal user_type 2 %}
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    系统管理 <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/user/">用户管理</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/rbac/permissions/">权限管理</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/rbac/roles/">角色管理</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/rbac/menus/">菜单管理</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/user/add_customer/">新增客户</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/user/add_staff/">新增工作人员</a></li>
+                                </ul>
+                            </li>
+							{% endifequal %}
+                            <li><a href="/user/profile/">个人信息</a></li>
+                        </ul>
+                        <ul  class="nav navbar-nav navbar-right ">
+                            <li><a href="/index/"><span class="glyphicon glyphicon-home"></span>主页</a></li>
+                            <li><a href="/logout/"><span class="glyphicon glyphicon-log-out"></span>退出</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+</div>
+	<div class="row">
+		<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="text-center"><strong>处理售后申请</strong></h3>
+    </div>
+    <div class="panel-body">
+              <div class="container">
+            <div class="row">
+<div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
 <form method="post">
     {% csrf_token %}
-    <input name="customer_id" disabled value= {{ service_obj.customer_id }}>
-    <input name="order_id" disabled value= {{ service_obj.order_id  }}>
-    <textarea name="content" cols="40" rows="10" disabled>{{ service_obj.content }}</textarea>
-    <textarea name="reply" cols="40" rows="10" >{{ service_obj.reply }}</textarea>
+ <div class="form-group">
+     <p><strong>用户名</strong></p>
+    <input name="customer_id" class="form-control input-lg" disabled value= {{ service_obj.customer_id }}>
+ </div>
+ <div class="form-group">
+     <p><strong>订单编号</strong></p>
+    <input name="order_id" class="form-control input-lg" disabled value= {{ service_obj.order_id  }}>
+  </div>
+  <div class="form-group">
+     <p><strong>客户申请单内容</strong></p>
+    <textarea name="content" cols="80" rows="5" disabled>{{ service_obj.content }}</textarea>
+   </div>
+   <div class="form-group">
+     <p><strong>客服处理结果</strong></p>
+    <textarea name="reply" cols="80" rows="5" >{{ service_obj.reply }}</textarea>
+    </div>
+   <div class="form-group">
+     <p><strong>申请单状态</strong></p>
     <select name="status">
       {%for status in status_choices %}
         <option value= {{status}}>{{status}}</option>
       {%endfor%}
         <option value={{ now_status }} selected="selected">{{ now_status }}</option>
     </select>
-    <button type="submit">提交</button>
+   </div>
+    <button type="submit" class="btn btn-primary btn-block btn-lg">提交</button>
 </form>
+            </div>
+              </div>
+    </div>
+</div>
+</div>
+	</div>
+	<div class="row" style="width:100%;position:fixed;left:0; bottom:25px;z-index:-1;">
+	    <address class="text-center">
+		 <em>
+          <strong>数据库课程设计:</strong>第四小组;
+	      <strong>电话:</strong>(123) 456-7890;
+          <strong>邮箱:</strong><a href="mailto:#">mailto@somedomain.com</a>;
+          <strong>地址:</strong>安徽省,合肥市,安徽大学磬苑校区,笃行南楼
+		</em>
+          </address>
+		  	</div>
+	</div>
+	</div>
 </body>
 </html>

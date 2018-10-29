@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>权限管理</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系统主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 引入 Bootstrap -->
     <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../static/css/background.css">
 	<script src="../../static/js/jquery.min.js"></script>
 	<script src="../../static/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/echarts/4.2.0-rc.1/echarts-en.common.js"></script>
 </head>
 <body>
 <div class="container">
@@ -21,7 +22,6 @@
 	<div class="row">
           <nav class="navbar navbar-inverse" role="navigation">
                 <div class="container-fluid">
-
                     <div>
                         <ul class="nav navbar-nav">
                             <li><a href="/case/item/">商品列表</a></li>
@@ -98,36 +98,94 @@
                 </div>
             </nav>
 </div>
-	<div class="row">
-		<div class="panel panel-default">
-    <div class="panel-heading">
-        <h2 class="text-center">权限管理</h2>
-    </div>
-    <div class="panel-body text-center">
-<table class="table" border="1">
-   <thead>
-    <tr>
-        <td>权限</td>
-        <td>url</td>
-        <td>所属菜单</td>
-        <td colspan="2">操作<span class="glyphicon glyphicon-edit"></span></td>
-    </tr>
-	</thead>
-    {% for permission in permission_list %}
-        <tr>
-            <td>{{ permission.title }}</td>
-            <td>{{ permission.url }}</td>
-            <td>{{ permission.menu }}</td>
-			<td><a href="/rbac/permissions/edit/{{ permission.id }}">编辑<span class="glyphicon glyphicon-pencil"></span></a></td>
-            <td><a href="/rbac/permissions/delete/{{ permission.id }}">删除<span class="glyphicon glyphicon-trash"></span></a></td>
-        </tr>
-    {% endfor %}
-</table>
-<a href="/rbac/permissions/new"><button   type="button" class="btn btn-primary btn-block btn-lg">新增<span class="glyphicon glyphicon-plus"></span></button></a>
+{% ifequal user_type 1 %}
+<div class="container padding">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+                    <h3 class="text-center"><strong>个人信息</strong></h3>
+                </div>
+                <!-- Table -->
+                <table class="table table-hover">
+                    <tr>
+						<td>用户名</td>
+						<td>密码</td>
+                        <td>公司</td>
+                        <td>公司代表人</td>
+                        <td>邮政编码</td>
+                        <td>地址</td>
+                        <td>部门</td>
+                        <td>代理人</td>
+                        <td>电话</td>
+						<td>银行账号</td>
+						<td>税号</td>
+                    </tr>
+                    
+                    <tr>
+						<td>{{user.username}}</td>
+						<td>{{user.password}}</td>
+                        <td>{{person.company}}</td>
+                        <td>{{person.representative}}</td>
+                        <td>{{person.postcode}}</td>
+                        <td>{{person.address}}</td>
+                        <td>{{person.apartment}}</td>
+                        <td>{{person.agent}}</td>
+                        <td>{{person.telephone}}</td>
+						<td>{{person.bank}}</td>
+						<td>{{person.taxid}}</td>
+                        
+                    </tr>
+                    
+                 
+                    
+                </table>
 </div>
 </div>
-	</div>
-	<div class="row" style="width:100%;position:fixed;left:0; bottom:25px;z-index:-1;">
+
+{% endifequal %}
+{% ifequal user_type 2 %}
+<div class="container padding">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+                    <h3 class="text-center"><strong>个人信息</strong></h3>
+                </div>
+                <!-- Table -->
+                <table class="table table-hover">
+                    <tr>
+						<td>用户名</td>
+						<td>密码</td>
+                        <td>年龄</td>
+                        <td>性别</td>
+                        <td>部门</td>
+                        <td>角色</td>
+                        <td>住址</td>
+                        <td>被评分次数</td>
+                        <td>评分</td>
+                    </tr>
+                    
+                    <tr>
+						<td>{{user.username}}</td>
+						<td>{{user.password}}</td>
+                        <td>{{person.age}}</td>
+                        <td>{{person.gender}}</td>
+                        <td>{{person.apartment}}</td>
+                        <td>{{person.role}}</td>
+                        <td>{{person.address}}</td>
+                        <td>{{person.rate_times}}</td>
+                        <td>{{person.rate}}</td>
+
+                        
+                    </tr>
+                    
+                 
+                    
+                </table>
+</div>
+</div>
+{% endifequal %}
+
+	<div class="row" style="width:100%; position:fixed; left:0; bottom:25px;z-index:-1;">
 	    <address class="text-center">
 		 <em>
           <strong>数据库课程设计:</strong>第四小组;

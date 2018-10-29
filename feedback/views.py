@@ -11,26 +11,26 @@ from CRMSystem.settings import USER_ID, USER_TYPE
 def service_list(request):
     if request.session[USER_TYPE] == 1:
         service_list = ServiceInfo.objects.filter(customer_id=request.session[USER_ID])
-        return render(request, "service_list.html", {"services_list": service_list})
+        return render(request, "service_list.html", {"services_list": service_list, 'user_type': request.session[USER_TYPE]})
     else:
         service_list = ServiceInfo.objects.all()
-        return render(request, "service_list.html", {"services_list": service_list})
+        return render(request, "service_list.html", {"services_list": service_list, 'user_type': request.session[USER_TYPE]})
 
 
 def complaint_list(request):
     if request.session[USER_TYPE] == 1:
         complaint_list = ComplaintInfo.objects.filter(customer_id=request.session[USER_ID])
-        return render(request, "complaint_list.html", {"complaint_list": complaint_list})
+        return render(request, "complaint_list.html", {"complaint_list": complaint_list, 'user_type': request.session[USER_TYPE]})
     else:
         complaint_list = ComplaintInfo.objects.all()
-        return render(request, "complaint_list.html", {"complaint_list": complaint_list})
+        return render(request, "complaint_list.html", {"complaint_list": complaint_list, 'user_type': request.session[USER_TYPE]})
 
 
 def add_service(request):
     customer_order = OrderInfo.objects.filter(customer_id=request.session[USER_ID])
     if request.method == 'GET':
         service_form = ServiceModelForm()
-        return render(request, "add_service.html", {"service_form": service_form, "customer_order": customer_order})
+        return render(request, "add_service.html", {"service_form": service_form, "customer_order": customer_order, 'user_type': request.session[USER_TYPE]})
     else:
         # service_form_test = ServiceModelForm(request.POST)
         order_message = request.POST.get("order_id", None)
@@ -58,7 +58,7 @@ def add_complaint(request):
     customer_id = UserInfo.objects.filter(id=request.session[USER_ID]).first()
     if request.method == 'GET':
         type_choices = dict(ComplaintInfo.TYPE_CHOICES).values()
-        return render(request, 'add_complaint.html', {"type_choices": type_choices})
+        return render(request, 'add_complaint.html', {"type_choices": type_choices, 'user_type': request.session[USER_TYPE]})
     else:
         title = request.POST.get('title')
         content = request.POST.get('content')
@@ -83,7 +83,8 @@ def edit_service(request, id):
     if request.method == 'GET':
         status_choices = dict(ServiceInfo.STATUS_CHOICES).values()
         return render(request, 'edit_service.html', {"service_obj": service_obj, "status_choices": status_choices,
-                                                     "now_status": dict(ServiceInfo.STATUS_CHOICES)[service_obj.status]})
+                                                     "now_status": dict(ServiceInfo.STATUS_CHOICES)[service_obj.status],
+                                                     'user_type': request.session[USER_TYPE]})
     else:
         reply = request.POST.get('reply', None)
         last_modify_date = timezone.now()
@@ -102,7 +103,8 @@ def edit_complaint(request, id):
         status_choices = dict(ComplaintInfo.STATUS_CHOICES).values()
         now_status = dict(ComplaintInfo.STATUS_CHOICES)[complaint_obj.status]
         return render(request, 'edit_complaint.html', {"complaint_obj": complaint_obj, "now_type": now_type,
-                                                       "now_status": now_status, "status_choices": status_choices})
+                                                       "now_status": now_status, "status_choices": status_choices,
+                                                       'user_type': request.session[USER_TYPE]})
     else:
         reply = request.POST.get('reply', None)
         last_modify_date = timezone.now()

@@ -10,7 +10,7 @@ class ServiceModelForm(ModelForm):
             'order_id': '订单编号',
             'staff_id': '处理人',
             'content': '内容',
-            'reply': '回复',
+            'reply': '恢复',
             'submit_date': '提交时间',
             'last_modify_date': '最后修改时间',
             'status': '状态',
