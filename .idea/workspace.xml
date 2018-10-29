@@ -2,86 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f214651-f810-4681-a2b2-c97d22452ce0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/no_permission.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CRMSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CRMSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRMSystem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRMSystem/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRMSystem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRMSystem/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRMSystem/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRMSystem/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/migrations/0002_iteminfo_orderinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/migrations/0002_iteminfo_orderinfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/migrations/0003_orderinfo_is_rated.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/migrations/0003_orderinfo_is_rated.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/migrations/0004_iteminfo_rate_times.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/migrations/0004_iteminfo_rate_times.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/templates/add_item.html" beforeDir="false" afterPath="$PROJECT_DIR$/case/templates/add_item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/templates/add_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/case/templates/add_order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/templates/item_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/case/templates/item_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/templates/order_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/case/templates/order_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/templates/rate.html" beforeDir="false" afterPath="$PROJECT_DIR$/case/templates/rate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/migrations/0002_complaintinfo_serviceinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/migrations/0002_complaintinfo_serviceinfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/migrations/0003_auto_20181022_1905.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/migrations/0003_auto_20181022_1905.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feedback/templates/add_complaint.html" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/templates/add_complaint.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/templates/add_service.html" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/templates/add_service.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/templates/complaint_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/templates/complaint_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/templates/edit_complaint.html" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/templates/edit_complaint.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/templates/edit_service.html" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/templates/edit_service.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/templates/service_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/templates/service_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/middleware/rbac.py" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/middleware/rbac.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/migrations/0002_menu_permission_role_userinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/migrations/0002_menu_permission_role_userinfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/migrations/0003_auto_20181021_2201.py" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/migrations/0003_auto_20181021_2201.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/service/init_permission.py" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/service/init_permission.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/templates/common_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/templates/common_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/templates/menus.html" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/templates/menus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/templates/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/templates/message.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/templates/message_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/templates/message_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/templates/permissions.html" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/templates/permissions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/templates/roles.html" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/templates/roles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/templates/users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/migrations/0002_customermessage_staffmessage.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/migrations/0002_customermessage_staffmessage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/migrations/0003_auto_20181021_1859.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/migrations/0003_auto_20181021_1859.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/migrations/0004_staffinfo_rate_times.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/migrations/0004_staffinfo_rate_times.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/add_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/add_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/edit_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/edit_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/no_permission.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/no_permission.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,81 +35,103 @@
     <session id="1383435234">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.22" value="2" />
-          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.43" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Django Console" value="98" />
           <entry key="dummy" value="9" />
-          <entry key="html" value="1481" />
+          <entry key="html" value="1488" />
           <entry key="py" value="18877" />
-          <entry key="txt" value="136" />
+          <entry key="txt" value="175" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1481" />
-          <entry key="PLAIN_TEXT" value="145" />
+          <entry key="HTML" value="1488" />
+          <entry key="PLAIN_TEXT" value="184" />
           <entry key="Python" value="18975" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="62" />
+          <entry key="html" value="68" />
           <entry key="js" value="3" />
-          <entry key="py" value="152" />
+          <entry key="py" value="153" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="62" />
+          <entry key="HTML" value="68" />
           <entry key="JavaScript" value="3" />
-          <entry key="Python" value="152" />
+          <entry key="Python" value="153" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7382698">
+    <splitter split-orientation="horizontal" split-proportion="0.9">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/user/views.py">
+            <entry file="file://$PROJECT_DIR$/user/templates/profile.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="385">
-                  <caret line="151" column="61" selection-start-line="151" selection-start-column="61" selection-end-line="151" selection-end-column="61" />
-                  <folding>
-                    <element signature="e#0#68#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="506">
+                  <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/user/urls.py">
+            <entry file="file://$PROJECT_DIR$/case/templates/item_list.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-                  <folding>
-                    <element signature="e#0#32#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="198">
+                  <caret line="129" column="23" lean-forward="true" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="79" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/case/templates/rate.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="176">
+                  <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/user/templates/profile.html">
+            <entry file="file://$PROJECT_DIR$/templates/no_permission.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+                <state relative-caret-position="814">
+                  <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+                  <folding>
+                    <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/case/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="149">
+                  <caret line="15" column="24" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#0#59#0" expanded="true" />
+                    <marker date="1540799973712" expanded="true" signature="536:541" ph="..." />
+                    <marker date="1540799973712" expanded="true" signature="938:939" ph="..." />
+                    <marker date="1540799973712" expanded="true" signature="938:943" ph="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -192,21 +139,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/feedback/templates/add_complaint.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="367">
-                  <caret line="99" column="22" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+                <state relative-caret-position="281">
+                  <caret line="111" column="25" lean-forward="true" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/rbac/admin.py">
+            <entry file="file://$PROJECT_DIR$/case/templates/order_list.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="88">
-                  <caret line="5" selection-start-line="5" selection-end-line="8" />
-                  <folding>
-                    <marker date="1540806382659" expanded="true" signature="173:243" ph="..." />
-                    <marker date="1540806382659" expanded="true" signature="386:418" ph="..." />
-                  </folding>
+                <state relative-caret-position="149">
+                  <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
                 </state>
               </provider>
             </entry>
@@ -221,25 +164,9 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/case/admin.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="242">
-                  <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/no_permission.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-295" />
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/rbac/service/init_permission.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="317">
+                <state relative-caret-position="506">
                   <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
@@ -268,7 +195,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/feedback/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="549">
+                <state relative-caret-position="1298">
                   <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
                   <folding>
                     <element signature="e#0#59#0" expanded="true" />
@@ -280,7 +207,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/feedback/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="572">
+                <state relative-caret-position="1078">
                   <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
@@ -295,7 +222,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/rbac/middleware/rbac.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
+                <state relative-caret-position="352">
                   <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
@@ -307,7 +234,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/rbac/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
+                <state relative-caret-position="220">
                   <caret line="17" selection-start-line="17" selection-end-line="17" />
                   <folding>
                     <element signature="e#0#54#0" expanded="true" />
@@ -319,7 +246,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/rbac/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="337">
+                <state relative-caret-position="1012">
                   <caret line="46" column="7" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="12" />
                 </state>
               </provider>
@@ -345,7 +272,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/case/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="560">
+                <state relative-caret-position="660">
                   <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
@@ -386,9 +313,11 @@
       <find>g</find>
       <find>global</find>
       <find>/person</find>
+      <find>\&lt;div class\=\&quot;navbar\-header\&quot;\&gt;\n                        \&lt;a class\=\&quot;navbar\-brand\&quot; href\=\&quot;\/index\/\&quot;\&gt;导航\&lt;\/a\&gt;\n                    \&lt;\/div\&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace>/user/profile/</replace>
+      <replace />
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -398,7 +327,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/RBAC/service/init_permission.py" />
         <option value="$PROJECT_DIR$/RBAC/admin.py" />
         <option value="$PROJECT_DIR$/RBAC/views.py" />
         <option value="$PROJECT_DIR$/User/forms.py" />
@@ -419,9 +347,7 @@
         <option value="$PROJECT_DIR$/user/templates/user_edit.html" />
         <option value="$PROJECT_DIR$/case/templates/add_item.html" />
         <option value="$PROJECT_DIR$/feedback/templates/servicelist.html" />
-        <option value="$PROJECT_DIR$/case/templates/item_list.html" />
         <option value="$PROJECT_DIR$/case/urls.py" />
-        <option value="$PROJECT_DIR$/case/templates/rate.html" />
         <option value="$PROJECT_DIR$/rbac/service/init_permission.py" />
         <option value="$PROJECT_DIR$/CRMSystem/settings.py" />
         <option value="$PROJECT_DIR$/rbac/models.py" />
@@ -446,9 +372,12 @@
         <option value="$PROJECT_DIR$/rbac/middleware/rbac.py" />
         <option value="$PROJECT_DIR$/user/admin.py" />
         <option value="$PROJECT_DIR$/user/views.py" />
-        <option value="$PROJECT_DIR$/feedback/templates/add_complaint.html" />
         <option value="$PROJECT_DIR$/user/urls.py" />
         <option value="$PROJECT_DIR$/user/templates/profile.html" />
+        <option value="$PROJECT_DIR$/case/templates/item_list.html" />
+        <option value="$PROJECT_DIR$/case/templates/rate.html" />
+        <option value="$PROJECT_DIR$/feedback/templates/add_complaint.html" />
+        <option value="$PROJECT_DIR$/templates/no_permission.html" />
       </list>
     </option>
   </component>
@@ -459,10 +388,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2594" />
-    <option name="y" value="11" />
-    <option name="width" value="552" />
-    <option name="height" value="344" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1939" />
+    <option name="height" value="1099" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -472,6 +401,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -487,6 +417,12 @@
             <path>
               <item name="CRMSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="CRMSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="case" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CRMSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CRMSystem" type="462c0819:PsiDirectoryNode" />
               <item name="feedback" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -498,41 +434,12 @@
             <path>
               <item name="CRMSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="CRMSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="rbac" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CRMSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CRMSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="rbac" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CRMSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CRMSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CRMSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CRMSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CRMSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CRMSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CRMSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CRMSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -684,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540805809786</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add new UI and some new features">
+      <created>1540809691197</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1540809691197</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -697,15 +611,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1696" height="1066" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83109117" visible="true" weight="0.16625917" />
-      <window_info id="Structure" order="1" sideWeight="0.16890882" side_tool="true" visible="true" weight="0.16625917" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83071554" visible="true" weight="0.18498659" />
+      <window_info id="Structure" order="1" sideWeight="0.16928446" side_tool="true" visible="true" weight="0.18498659" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4987775" weight="0.32975295" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.64544237" visible="true" weight="0.28141782" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.64544237" visible="true" weight="0.23087248" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49938875" weight="0.39957035" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -736,7 +650,8 @@
     <MESSAGE value="init version0.2" />
     <MESSAGE value="modify some mistakes" />
     <MESSAGE value="1. modify some mistakes&#10;2. add some functions (feedback app)" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. modify some mistakes&#10;2. add some functions (feedback app)" />
+    <MESSAGE value="add new UI and some new features" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new UI and some new features" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -757,9 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -772,13 +684,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/case/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case/templates/item_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/case/migrations/0002_iteminfo_orderinfo.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -799,9 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -840,20 +742,6 @@
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case/templates/rate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case/templates/order_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -922,13 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feedback/templates/complaint_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -970,64 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feedback/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-            <marker date="1540215972000" expanded="true" signature="118:119" ph="..." />
-            <marker date="1540215972000" expanded="true" signature="481:486" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feedback/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1540215972000" expanded="true" signature="528:533" ph="..." />
-            <marker date="1540215972000" expanded="true" signature="1190:1191" ph="..." />
-            <marker date="1540215972000" expanded="true" signature="1190:1759" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feedback/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-            <marker date="1540799973712" expanded="true" signature="536:541" ph="..." />
-            <marker date="1540799973712" expanded="true" signature="938:939" ph="..." />
-            <marker date="1540799973712" expanded="true" signature="938:943" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/case/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1035,64 +858,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="46" column="7" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/case/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/no_permission.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-295" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1540804598574" expanded="true" signature="857:862" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/service/init_permission.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="5" selection-start-line="5" selection-end-line="8" />
-          <folding>
-            <marker date="1540806382659" expanded="true" signature="173:243" ph="..." />
-            <marker date="1540806382659" expanded="true" signature="386:418" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/middleware/rbac.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1110,12 +879,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/models.py">
+    <entry file="file://$PROJECT_DIR$/user/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="11" />
+        <state relative-caret-position="3124">
+          <caret line="151" column="61" selection-start-line="151" selection-start-column="61" selection-end-line="151" selection-end-column="61" />
           <folding>
-            <marker date="1540215972000" expanded="true" signature="92:97" ph="..." />
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="5" selection-start-line="5" selection-end-line="8" />
+          <folding>
+            <marker date="1540806382659" expanded="true" signature="173:243" ph="..." />
+            <marker date="1540806382659" expanded="true" signature="386:418" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1127,37 +924,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feedback/templates/add_complaint.html">
+    <entry file="file://$PROJECT_DIR$/rbac/service/init_permission.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="99" column="22" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="151" column="61" selection-start-line="151" selection-start-column="61" selection-end-line="151" selection-end-column="61" />
+        <state relative-caret-position="506">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding>
-            <element signature="e#0#68#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/urls.py">
+    <entry file="file://$PROJECT_DIR$/feedback/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="1298">
+          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feedback/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1078">
+          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1540215972000" expanded="true" signature="528:533" ph="..." />
+            <marker date="1540215972000" expanded="true" signature="1190:1191" ph="..." />
+            <marker date="1540215972000" expanded="true" signature="1190:1759" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/middleware/rbac.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="46" column="7" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="11" />
+          <folding>
+            <marker date="1540215972000" expanded="true" signature="92:97" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1540804598574" expanded="true" signature="857:862" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feedback/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+            <marker date="1540215972000" expanded="true" signature="118:119" ph="..." />
+            <marker date="1540215972000" expanded="true" signature="481:486" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/user/templates/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="506">
           <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="15" column="24" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+            <marker date="1540799973712" expanded="true" signature="536:541" ph="..." />
+            <marker date="1540799973712" expanded="true" signature="938:939" ph="..." />
+            <marker date="1540799973712" expanded="true" signature="938:943" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/templates/order_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/templates/item_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="129" column="23" lean-forward="true" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/templates/rate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feedback/templates/add_complaint.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="111" column="25" lean-forward="true" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/no_permission.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
