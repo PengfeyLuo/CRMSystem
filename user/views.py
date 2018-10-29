@@ -38,11 +38,12 @@ def index(request):
     Item_data=[]
     count=0
     for item in tmp:
+        print(count)
         Item_name.append(item.name+item.model)
         #Item_name.append(item.name + item.model + '\\n' + str(item.production_date))
         Item_data.append(str(item.rate))        #注意传给前端Echarts的一定都要是字符串
-        ++count
-        if count>=5:
+        count+=1
+        if count>=6:
             break
 
     content={"Item_name":Item_name,"Item_data":Item_data, 'user_type': request.session[USER_TYPE]}
